@@ -2,7 +2,7 @@
 processList = {
 
         #centrally-produced backgrounds
-        'p8_ee_Zee_ecm91':{'chunks':100, 'fraction':0.01},
+        #'p8_ee_Zee_ecm91':{'chunks':100, 'fraction':0.01},
         #'p8_ee_Zbb_ecm91':{'chunks':100, 'fraction':1},
         #'p8_ee_Ztautau_ecm91':{'chunks':100, 'fraction':1},
         #'p8_ee_Zud_ecm91':{'chunks':100, 'fraction':1},
@@ -11,11 +11,11 @@ processList = {
         #'p8_ee_Zmumu_ecm91':{'chunks':100, 'fraction':1},
 
         #privately-produced signals
-        #'HNL_Majorana_eenu_10GeV_2e-4Ve':{},
-        #'HNL_Majorana_eenu_20GeV_9e-5Ve':{},
-        #'HNL_Majorana_eenu_20GeV_3e-5Ve':{},
-        #'HNL_Majorana_eenu_30GeV_1e-5Ve':{},
-        #'HNL_Majorana_eenu_50GeV_6e-6Ve':{},
+        'HNL_Majorana_eenu_10GeV_2e-4Ve':{},
+        'HNL_Majorana_eenu_20GeV_9e-5Ve':{},
+        'HNL_Majorana_eenu_20GeV_3e-5Ve':{},
+        'HNL_Majorana_eenu_30GeV_1e-5Ve':{},
+        'HNL_Majorana_eenu_50GeV_6e-6Ve':{},
 
         #test
         #'p8_ee_Zee_ecm91':{'fraction':0.000001},
@@ -26,7 +26,7 @@ processList = {
 #Production tag. This points to the yaml files for getting sample statistics
 #Mandatory when running over EDM4Hep centrally produced events
 #Comment out when running over privately produced events
-prodTag     = "FCCee/winter2023/IDEA/"
+#prodTag     = "FCCee/winter2023/IDEA/"
 
 #Input directory
 #Comment out when running over centrally produced events
@@ -34,14 +34,14 @@ prodTag     = "FCCee/winter2023/IDEA/"
 #inputDir = "/eos/experiment/fcc/ee/analyses/case-studies/bsm/LLPs/HNL_Majorana_eenu/spring2021/output_MadgraphPythiaDelphes"
 #inputDir = "/eos/experiment/fcc/ee/generation/DelphesStandalone/Edm4Hep/pre_winter2023_tests_v2"
 #inputDir = "/eos/experiment/fcc/ee/generation/DelphesEvents/spring2021/IDEA"
-#inputDir = "/eos/user/j/jhayward/signalGeneration/signals"
+inputDir = "/eos/user/j/jhayward/signalGeneration/signals"
 #inputDir = "/afs/cern.ch/work/w/williams/public/FCCSkimming/k4Gen/"
 
 #Optional: output directory, default is local dir
 #outputDir = "/eos/experiment/fcc/ee/analyses/case-studies/bsm/LLPs/HNL_Majorana_eenu/spring2021/output_stage1/"
 #outputDir = "/eos/experiment/fcc/ee/analyses/case-studies/bsm/LLPs/HNL_Majorana_eenu/pre_winter2023_tests_v2/output_stage1/"
 #outputDir = "/eos/user/j/jalimena/FCCeeLLP/"
-outputDir = "backgroundFilterTest/output_stage1"
+outputDir = "DVTest/1mm_tracks/output_stage1"
 
 #outputDirEos = "/eos/experiment/fcc/ee/analyses/case-studies/bsm/LLPs/HNL_Majorana_eenu/spring2021/output_stage1/"
 #outputDirEos = "/eos/user/j/jalimena/FCCeeLLP/"
@@ -121,7 +121,7 @@ class RDFanalysis():
 
 
                 ###Filter to reduce file size and increase processing speed
-                .Filter("n_RecoElectrons==2")
+                #.Filter("n_RecoElectrons==2")
 
                 #Displaced vertex stuff
                 
@@ -135,11 +135,15 @@ class RDFanalysis():
                 #select tracks with pT >1GeV
                 .Define("sel_tracks_pt", "VertexingUtils::sel_pt_tracks(1)(EFlowTrack_1)")
                 #select tracks with |d_0| > 2mm
-                .Define("sel_tracks", "VertexingUtils::sel_d0_tracks(2)(sel_tracks_pt)")
+                .Define("sel_tracks", "VertexingUtils::sel_d0_tracks(1)(sel_tracks_pt)")
                 #find the DVs
                 .Define("DV_evt_seltracks", "VertexFinderLCFIPlus::get_SV_event(sel_tracks, EFlowTrack_1, PrimaryVertexObject, true, 9., 40., 5.)")
                 #find number of DVs
                 .Define("n_seltracks_DVs", "VertexingUtils::get_n_SV(DV_evt_seltracks)")
+
+                .Define("DV_Lxyz", "VertexingUtils::get_d3d_SV(DV_evt_seltracks, PrimaryVertexObject)")
+                .Define("DV_Lxyz_sig", "myUtils::get_d3d_SV_Sig(DV_evt_seltracks, PrimaryVertexObject)")
+
                )
                 return df2
 
@@ -154,7 +158,9 @@ class RDFanalysis():
                         "RecoElectronTrack_absD0",
                         "reclustered_missing_p",
                         "n_antikt_jets",
-                        "n_seltracks_DVs"
+                        "n_seltracks_DVs",
+                        "DV_Lxyz",
+                        "DV_Lxyz_sig",
                         
 		]
 

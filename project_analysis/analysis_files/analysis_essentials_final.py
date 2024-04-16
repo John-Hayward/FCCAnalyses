@@ -2,13 +2,13 @@
 #inputDir = "/eos/experiment/fcc/ee/analyses/case-studies/bsm/LLPs/HNL_Majorana_eenu/spring2021/output_stage1/"
 #inputDir = "/eos/experiment/fcc/ee/analyses/case-studies/bsm/LLPs/HNL_Majorana_eenu/pre_winter2023_tests_v2/output_stage1/"
 #inputDir = "/eos/user/j/jalimena/FCCeeLLP/"
-inputDir = "DVtest/winter23/output_stage1"
+inputDir = "DVTest/1mm_tracks/output_stage1"
 
 
 #Output directory where the files produced at the final-selection level are
 #outputDir = "/eos/experiment/fcc/ee/analyses/case-studies/bsm/LLPs/HNL_Majorana_eenu/spring2021/output_finalSel/"
 #outputDir = "/eos/experiment/fcc/ee/analyses/case-studies/bsm/LLPs/HNL_Majorana_eenu/pre_winter2023_tests_v2/output_finalSel/"
-outputDir  = "DVtest/winter23/output_finalSel_afterDisplacement"
+outputDir  = "DVTest/1mm_tracks/output_finalSel"
 
 #Integrated luminosity for scaling number of events (required only if setting doScale to true)
 intLumi = 150e+6 #pb^-1
@@ -23,13 +23,13 @@ processList = {
     #run over the full statistics from stage1
 
     #backgrounds
-    'p8_ee_Zee_ecm91':{},
-    'p8_ee_Ztautau_ecm91':{},
-    'p8_ee_Zbb_ecm91':{},
-    'p8_ee_Zcc_ecm91':{},
-    'p8_ee_Zud_ecm91':{},
-    'p8_ee_Zss_ecm91':{},
-    'p8_ee_Zmumu_ecm91':{},
+    #'p8_ee_Zee_ecm91':{},
+    #'p8_ee_Ztautau_ecm91':{},
+    #'p8_ee_Zbb_ecm91':{},
+    #'p8_ee_Zcc_ecm91':{},
+    #'p8_ee_Zud_ecm91':{},
+    #'p8_ee_Zss_ecm91':{},
+    #'p8_ee_Zmumu_ecm91':{},
     #'p8_ee_Zuds_ecm91':{},
 
     #signals
@@ -109,22 +109,23 @@ cutList = {
 
     ##cuts 3 - reclustered jets and missing momentum after reclustering
     #Applying cut for 1 displaced vertex at end
-    "sel2RecoEle": "n_RecoElectrons==2",
-    "sel2RecoEle_vetoes": "n_RecoElectrons==2 && n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0",
-    "sel2RecoEle_vetoes_MissingEnergyGt10": "n_RecoElectrons==2 && n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0 && reclustered_missing_p>10",
-    "sel2RecoEle_vetoes_MissingEnergyGt10_absD0Gt0p5": "n_RecoElectrons==2 && n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0 && reclustered_missing_p>10 && RecoElectronTrack_absD0[0]>0.5 && RecoElectronTrack_absD0[1]>0.5",
-    "sel2RecoEle_vetoes_MissingEnergyGt10_absD0Gt2p0": "n_RecoElectrons==2 && n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0 && reclustered_missing_p>10 && RecoElectronTrack_absD0[0]>2.0 && RecoElectronTrack_absD0[1]>2.0",
-    "sel2RecoEle_vetoes_MissingEnergyGt10_absD0Gt4p0": "n_RecoElectrons==2 && n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0 && reclustered_missing_p>10 && RecoElectronTrack_absD0[0]>4.0 && RecoElectronTrack_absD0[1]>4.0",
-    "sel2RecoEle_vetoes_MissingEnergyGt10_absD0Gt4p0_1DV": "n_RecoElectrons==2 && n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0 && reclustered_missing_p>10 && RecoElectronTrack_absD0[0]>4.0 && RecoElectronTrack_absD0[1]>4.0 && n_seltracks_DVs==1", 
+    #"sel2RecoEle": "n_RecoElectrons==2",
+    #"sel2RecoEle_vetoes": "n_RecoElectrons==2 && n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0",
+    #"sel2RecoEle_vetoes_MissingEnergyGt10": "n_RecoElectrons==2 && n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0 && reclustered_missing_p>10",
+    #"sel2RecoEle_vetoes_MissingEnergyGt10_absD0Gt0p5": "n_RecoElectrons==2 && n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0 && reclustered_missing_p>10 && RecoElectronTrack_absD0[0]>0.5 && RecoElectronTrack_absD0[1]>0.5",
+    #"sel2RecoEle_vetoes_MissingEnergyGt10_absD0Gt2p0": "n_RecoElectrons==2 && n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0 && reclustered_missing_p>10 && RecoElectronTrack_absD0[0]>2.0 && RecoElectronTrack_absD0[1]>2.0",
+    #"sel2RecoEle_vetoes_MissingEnergyGt10_absD0Gt4p0": "n_RecoElectrons==2 && n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0 && reclustered_missing_p>10 && RecoElectronTrack_absD0[0]>4.0 && RecoElectronTrack_absD0[1]>4.0",
+    #"sel2RecoEle_vetoes_MissingEnergyGt10_absD0Gt4p0_1DV": "n_RecoElectrons==2 && n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0 && reclustered_missing_p>10 && RecoElectronTrack_absD0[0]>4.0 && RecoElectronTrack_absD0[1]>4.0 && n_seltracks_DVs==1", 
 
     #Applying cut for 1 displaced vertex before vetoes
-    #"sel2RecoEle": "n_RecoElectrons==2",
-    #"sel2RecoEle_1DV": "n_RecoElectrons==2 && n_seltracks_DVs==1",
-    #"sel2RecoEle_1DV_vetoes": "n_RecoElectrons==2  && n_seltracks_DVs==1&& n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0",
-    #"sel2RecoEle_1DV_vetoes_MissingEnergyGt10": "n_RecoElectrons==2  && n_seltracks_DVs==1&& n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0 && reclustered_missing_p>10",
-    #"sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt0p5": "n_RecoElectrons==2 && n_seltracks_DVs==1 && n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0 && reclustered_missing_p>10 && RecoElectronTrack_absD0[0]>0.5 && RecoElectronTrack_absD0[1]>0.5",
-    #"sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt2p0": "n_RecoElectrons==2 && n_seltracks_DVs==1 && n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0 && reclustered_missing_p>10 && RecoElectronTrack_absD0[0]>2.0 && RecoElectronTrack_absD0[1]>2.0",
-    #"sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt4p0": "n_RecoElectrons==2 && n_seltracks_DVs==1 && n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0 && reclustered_missing_p>10 && RecoElectronTrack_absD0[0]>4.0 && RecoElectronTrack_absD0[1]>4.0",
+    "selNone": "n_RecoElectrons>-1",
+    "sel2RecoEle": "n_RecoElectrons==2",
+    "sel2RecoEle_1DV": "n_RecoElectrons==2 && n_seltracks_DVs==1",
+    "sel2RecoEle_1DV_vetoes": "n_RecoElectrons==2  && n_seltracks_DVs==1&& n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0",
+    "sel2RecoEle_1DV_vetoes_MissingEnergyGt10": "n_RecoElectrons==2  && n_seltracks_DVs==1&& n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0 && reclustered_missing_p>10",
+    "sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt0p5": "n_RecoElectrons==2 && n_seltracks_DVs==1 && n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0 && reclustered_missing_p>10 && RecoElectronTrack_absD0[0]>0.5 && RecoElectronTrack_absD0[1]>0.5",
+    "sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt2p0": "n_RecoElectrons==2 && n_seltracks_DVs==1 && n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0 && reclustered_missing_p>10 && RecoElectronTrack_absD0[0]>2.0 && RecoElectronTrack_absD0[1]>2.0",
+    "sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt4p0": "n_RecoElectrons==2 && n_seltracks_DVs==1 && n_RecoMuons==0 && n_RecoPhotons==0 && n_antikt_jets==0 && reclustered_missing_p>10 && RecoElectronTrack_absD0[0]>4.0 && RecoElectronTrack_absD0[1]>4.0",
 
     #cuts to ignore n_jets for investigating missing momentum calc
     #"sel2RecoEle_vetoes": "n_RecoElectrons==2 && n_RecoMuons==0 && n_RecoPhotons==0",
@@ -143,21 +144,22 @@ cutLabels = {
     #"sel2RecoEle_vetoes_MissingEnergyGt10_2": "$\\not\\! p >$ 10 GeV v.2",
     #"sel2RecoEle_vetoes_MissingEnergyGt10_absD0Gt0p5_2": "Electron $|d_0| >$ 0.5 mm v.2",
 
-    "sel2RecoEle": "Exactly 2 electrons",
-    "sel2RecoEle_vetoes": "Veto photons, muons, and jets",
-    "sel2RecoEle_vetoes_MissingEnergyGt10": "$\\not\\! p >$ 10 GeV",
-    "sel2RecoEle_vetoes_MissingEnergyGt10_absD0Gt0p5": "Electron $|d_0| >$ 0.5 mm",
-    "sel2RecoEle_vetoes_MissingEnergyGt10_absD0Gt2p0": "Electron $|d_0| >$ 2.0 mm",
-    "sel2RecoEle_vetoes_MissingEnergyGt10_absD0Gt4p0": "Electron $|d_0| >$ 4.0 mm",
-    "sel2RecoEle_vetoes_MissingEnergyGt10_absD0Gt4p0_1DV": "Exactly 1 displaced vertex",
-
     #"sel2RecoEle": "Exactly 2 electrons",
-    #"sel2RecoEle_1DV": "Exactly 1 displaced vertex",
-    #"sel2RecoEle_1DV_vetoes": "Veto photons, muons, and jets",
-    #"sel2RecoEle_1DV_vetoes_MissingEnergyGt10": "$\\not\\! p >$ 10GeV",
-    #"sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt0p5": "Electrons $|d_0| >$ 0.5 mm",
-    #"sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt2p0": "Electrons $|d_0| >$ 2.0 mm",
-    #"sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt4p0": "Electrons $|d_0| >$ 4.0 mm",    
+    #"sel2RecoEle_vetoes": "Veto photons, muons, and jets",
+    #"sel2RecoEle_vetoes_MissingEnergyGt10": "$\\not\\! p >$ 10 GeV",
+    #"sel2RecoEle_vetoes_MissingEnergyGt10_absD0Gt0p5": "Electron $|d_0| >$ 0.5 mm",
+    #"sel2RecoEle_vetoes_MissingEnergyGt10_absD0Gt2p0": "Electron $|d_0| >$ 2.0 mm",
+    #"sel2RecoEle_vetoes_MissingEnergyGt10_absD0Gt4p0": "Electron $|d_0| >$ 4.0 mm",
+    #"sel2RecoEle_vetoes_MissingEnergyGt10_absD0Gt4p0_1DV": "Exactly 1 displaced vertex",
+
+    "selNone": "before selection",
+    "sel2RecoEle": "Exactly 2 electrons",
+    "sel2RecoEle_1DV": "Exactly 1 displaced vertex",
+    "sel2RecoEle_1DV_vetoes": "Veto photons, muons, and jets",
+    "sel2RecoEle_1DV_vetoes_MissingEnergyGt10": "$\\not\\! p >$ 10GeV",
+    "sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt0p5": "Electrons $|d_0| >$ 0.5 mm",
+    "sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt2p0": "Electrons $|d_0| >$ 2.0 mm",
+    "sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt4p0": "Electrons $|d_0| >$ 4.0 mm",    
 
     #"sel2RecoEle_vetoes": "xactly 2 electrons and vetoes muons and photons",
 }
@@ -175,6 +177,7 @@ histoList = {
         "n_antikt_jets":            {"name":"n_antikt_jets", "title": "Number reconstructed jets after reclustering", "bin":5, "xmin":0, "xmax":5},
         "reclustered_missing_p":    {"name":"reclustered_missing_p", "title": "Total Missing p after reclustering [GeV]", "bin":100, "xmin":0, "xmax":50},
         "n_seltracks_DVs":          {"name":"n_seltracks_DVs", "title": "Number of displaced vertices", "bin": 10, "xmin":0, "xmax":5},  
-    
+        "DV_Lxyz":      {"name":"DV_Lxyz", "title": "Displaced vertex displacement", "bin":100, "xmin":0, "xmax":200}, 
+        "DV_Lxyz_sig":  {"name":"DV_Lxyz_sig", "title": "Displaced vertex displacement", "bin":1000, "xmin":0, "xmax":5000},
 
 }

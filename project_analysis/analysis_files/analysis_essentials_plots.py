@@ -13,14 +13,14 @@ delphesVersion = '3.4.2'
 #delphesVersion = ''
 energy         = 91
 collider       = 'FCC-ee'
-inputDir       = 'DVtest/winter23/output_finalSel_beforeVetoes/'
+inputDir       = 'DVTest/1mm_tracks/output_finalSel/'
 #inputDir = 'reclustered/winter23_2el/output_finalSel_extra_cuts/'
 #inputDir       = 'output_finalSel_Ztautau/'
 formats        = ['png']
 #formats        = ['pdf']
 yaxis          = ['lin','log']
 stacksig       = ['nostack']
-outdir         = 'DVtest/winter23/plots_beforeVetoes'
+outdir         = 'DVTest/1mm_tracks/plots'
 #outdir = 'reclustered/winter23_2el/plots_stacked'
 #outdir         = 'plots_Ztautau_spring2021_vs_prewinter2023/'
 splitLeg       = True
@@ -35,7 +35,8 @@ variables = [
         'n_RecoPhotons',
         'n_antikt_jets',
         'reclustered_missing_p',
-        
+        'DV_Lxyz',
+        'DV_Lxyz_sig',
              ]
 
     
@@ -46,6 +47,7 @@ selections['HNL']  = [
     # "sel1FSGenEle",
     # "sel1FSGenEle_eeInvMassGt80",
     # "sel1FSGenNu",
+    "selNone",
     "sel2RecoEle",
     "sel2RecoEle_1DV",
     "sel2RecoEle_1DV_vetoes",
@@ -62,7 +64,8 @@ extralabel = {}
 #extralabel['selNone'] = "Before selection"
 # extralabel['sel1FSGenEle'] = "At least 1 final state gen electron"
 # extralabel['sel1FSGenEle_eeInvMassGt80'] = "At least 1 final state gen electron, gen ee inv mass > 80 GeV"
-# extralabel['sel1FSGenNu'] = "At least 1 final state gen neutrino"
+# extralabel['sel1FSGenNu'] = "At least 1 final state gen neutrino
+extralabel['selNone'] = "Before selection"
 extralabel['sel2RecoEle'] = "2 electrons"
 extralabel['sel2RecoEle_1DV'] = "2 electrons; Exactly 1 DV"
 extralabel['sel2RecoEle_1DV_vetoes'] = "2 electrons; Exactly 1 DV; No muons, jets, or photons"
@@ -103,12 +106,12 @@ plots['HNL'] = {'signal':{
                      'HNL_Majorana_eenu_50GeV_6e-6Ve':['HNL_Majorana_eenu_50GeV_6e-6Ve'],
     },
                 'backgrounds':{
-                    'Zbb':['p8_ee_Zbb_ecm91'],
-                    'Zcc': ['p8_ee_Zcc_ecm91'],
-                    'Zud': ['p8_ee_Zud_ecm91'],
-                    'Ztautau': ['p8_ee_Ztautau_ecm91'],
-                    'Zee':['p8_ee_Zee_ecm91'],
-                    'Zmumu':['p8_ee_Zmumu_ecm91'],
+                    #'Zbb':['p8_ee_Zbb_ecm91'],
+                    #'Zcc': ['p8_ee_Zcc_ecm91'],
+                    #'Zud': ['p8_ee_Zud_ecm91'],
+                    #'Ztautau': ['p8_ee_Ztautau_ecm91'],
+                    #'Zee':['p8_ee_Zee_ecm91'],
+                    #'Zmumu':['p8_ee_Zmumu_ecm91'],
                     #'Zuds':['p8_ee_Zuds_ecm91'],
                     },
                     #'Ztautau_spring2021': ['p8_ee_Ztautau_ecm91_spring2021'],
