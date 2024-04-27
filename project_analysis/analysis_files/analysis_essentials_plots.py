@@ -13,30 +13,31 @@ delphesVersion = '3.4.2'
 #delphesVersion = ''
 energy         = 91
 collider       = 'FCC-ee'
-inputDir       = 'DVTest/1mm_tracks/output_finalSel/'
-#inputDir = 'reclustered/winter23_2el/output_finalSel_extra_cuts/'
+#inputDir       = 'DVTest/1mm_tracks/output_finalSel_report/'
+inputDir = 'reclustered/spring21_2el/output_finalSel/'
 #inputDir       = 'output_finalSel_Ztautau/'
 formats        = ['png']
 #formats        = ['pdf']
 yaxis          = ['lin','log']
 stacksig       = ['nostack']
-outdir         = 'DVTest/1mm_tracks/plots'
+outdir         = 'DVTest/1mm_tracks/plots_report_spring21'
 #outdir = 'reclustered/winter23_2el/plots_stacked'
 #outdir         = 'plots_Ztautau_spring2021_vs_prewinter2023/'
 splitLeg       = True
 
 variables = [      
-        'n_seltracks_DVs',
-        'n_RecoElectrons',
-        'n_RecoMuons',
-        'n_RecoJets',
-        'RecoMissingEnergy_p',
+        #'n_seltracks_DVs',
+        #'n_RecoElectrons',
+        #'n_RecoMuons',
+        #'n_RecoJets',
+        #'RecoMissingEnergy_p',
         'RecoElectronTrack_absD0',
-        'n_RecoPhotons',
-        'n_antikt_jets',
+        #'n_RecoPhotons',
+        #'n_antikt_jets',
         'reclustered_missing_p',
-        'DV_Lxyz',
-        'DV_Lxyz_sig',
+        #'DV_Lxyz',
+        #'DV_Lxyz_sig',
+        #'DV_Lxyz_error',
              ]
 
     
@@ -47,16 +48,22 @@ selections['HNL']  = [
     # "sel1FSGenEle",
     # "sel1FSGenEle_eeInvMassGt80",
     # "sel1FSGenNu",
-    "selNone",
-    "sel2RecoEle",
-    "sel2RecoEle_1DV",
-    "sel2RecoEle_1DV_vetoes",
-    # "sel2RecoEle_absD0Gt0p1",
-    "sel2RecoEle_1DV_vetoes_MissingEnergyGt10",
+    #"selNone",
+    "sel2RecoEle_3",
+    #"sel2RecoEle_small_vetoes",
+    "sel2RecoEle_vetoes_3",
+    "sel2RecoEle_vetoes_MissingEnergyGt10_3",
+    #"sel2RecoEle_1DV",
+    #"sel2RecoEle_1DV_vetoes",
+    ## "sel2RecoEle_absD0Gt0p1",
+    #"sel2RecoEle_1DV_vetoes_MissingEnergyGt10",
+    #"sel2RecoEle_1DV_vetoes_MissingEnergyGt20",
+    #"sel2RecoEle_1DV_vetoes_MissingEnergyGt25",
+    #"sel2RecoEle_1DV_vetoes_MissingEnergyGt30",
     # "sel2RecoE_1DVle_vetoes_absD0Gt0p5",
-    "sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt0p5",
-    "sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt2p0",
-    "sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt4p0",
+    #"sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt0p5",
+    #"sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt2p0",
+    #"sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt4p0",
     #"sel2RecoEle_vetoes",
 ]
 
@@ -66,16 +73,22 @@ extralabel = {}
 # extralabel['sel1FSGenEle_eeInvMassGt80'] = "At least 1 final state gen electron, gen ee inv mass > 80 GeV"
 # extralabel['sel1FSGenNu'] = "At least 1 final state gen neutrino
 extralabel['selNone'] = "Before selection"
-extralabel['sel2RecoEle'] = "2 electrons"
-extralabel['sel2RecoEle_1DV'] = "2 electrons; Exactly 1 DV"
-extralabel['sel2RecoEle_1DV_vetoes'] = "2 electrons; Exactly 1 DV; No muons, jets, or photons"
-#extralabel['sel2RecoEle_vetoes'] = "2 electrons; No muons, or photons"
-# extralabel['sel2RecoEle_absD0Gt0p1'] = "2 electrons with |d_0|>0.1 mm"
-extralabel['sel2RecoEle_1DV_vetoes_MissingEnergyGt10'] = "2 electrons; No muons, jets, or photons; Missing momentum > 10 GeV; Exactly 1 DV"
-# extralabel['sel2RecoE_1DVle_vetoes_absD0Gt0p5'] = "2 electrons with |d_0|>0.1 mm; No muons, jets, or photons"
-extralabel['sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt0p5'] = "2 electrons with |d_0|>0.5 mm; No muons, jets, or photons; Missing momentum > 10 GeV; Exactly 1 DV"
-extralabel['sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt2p0'] = "2 electrons with |d_0|>2.0 mm; No muons, jets, or photons; Missing momentum > 10 GeV; Exactly 1 DV"
-extralabel['sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt4p0'] = "2 electrons with |d_0|>4.0 mm; No muons, jets, or photons; Missing momentum > 10 GeV; Exactly 1 DV"
+extralabel['sel2RecoEle_3'] = "2 electrons"
+extralabel['sel2RecoEle_small_vetoes'] = "2 electrons; No muons, or photons"
+extralabel['sel2RecoEle_vetoes_3'] = "2 electrons; No muons, photons, or jets"
+extralabel['sel2RecoEle_vetoes_MissingEnergyGt10_3'] = "2 electrons; No muons, jets, or photons; Missing momentum > 10 GeV"
+#extralabel['sel2RecoEle_1DV'] = "2 electrons; Exactly 1 DV"
+#extralabel['sel2RecoEle_1DV_vetoes'] = "2 electrons; Exactly 1 DV; No muons, jets, or photons"
+##extralabel['sel2RecoEle_vetoes'] = "2 electrons; No muons, or photons"
+## extralabel['sel2RecoEle_absD0Gt0p1'] = "2 electrons with |d_0|>0.1 mm"
+#extralabel['sel2RecoEle_1DV_vetoes_MissingEnergyGt10'] = "2 electrons; No muons, jets, or photons; Missing momentum > 10 GeV; Exactly 1 DV"
+#extralabel['sel2RecoEle_1DV_vetoes_MissingEnergyGt20'] = "2 electrons; No muons, jets, or photons; Missing momentum > 20 GeV; Exactly 1 DV"
+#extralabel['sel2RecoEle_1DV_vetoes_MissingEnergyGt25'] = "2 electrons; No muons, jets, or photons; Missing momentum > 25 GeV; Exactly 1 DV"
+#extralabel['sel2RecoEle_1DV_vetoes_MissingEnergyGt30'] = "2 electrons; No muons, jets, or photons; Missing momentum > 30 GeV; Exactly 1 DV"
+## extralabel['sel2RecoE_1DVle_vetoes_absD0Gt0p5'] = "2 electrons with |d_0|>0.1 mm; No muons, jets, or photons"
+#extralabel['sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt0p5'] = "2 electrons with |d_0|>0.5 mm; No muons, jets, or photons; Missing momentum > 10 GeV; Exactly 1 DV"
+#extralabel['sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt2p0'] = "2 electrons with |d_0|>2.0 mm; No muons, jets, or photons; Missing momentum > 10 GeV; Exactly 1 DV"
+#extralabel['sel2RecoEle_1DV_vetoes_MissingEnergyGt10_absD0Gt4p0'] = "2 electrons with |d_0|>4.0 mm; No muons, jets, or photons; Missing momentum > 10 GeV; Exactly 1 DV"
 
 colors = {}
 colors['HNL_Majorana_eenu_10GeV_2e-4Ve'] = ROOT.kOrange+1
@@ -86,7 +99,7 @@ colors['HNL_Majorana_eenu_50GeV_6e-6Ve'] = ROOT.kSpring+10
 
 colors['Zbb'] = ROOT.kAzure-4
 colors['Zcc'] = ROOT.kCyan-9
-colors['Zud'] = ROOT.kViolet-4
+colors['Zuds'] = ROOT.kViolet-4
 colors['Ztautau'] = ROOT.kRed-3
 colors['Zee'] = ROOT.kGray+2
 colors['Zss'] = ROOT.kPink-8
@@ -99,19 +112,20 @@ colors['Zmumu'] = ROOT.kBlack
 
 plots = {}
 plots['HNL'] = {'signal':{
-                     'HNL_Majorana_eenu_10GeV_2e-4Ve':['HNL_Majorana_eenu_10GeV_2e-4Ve'],
-                     'HNL_Majorana_eenu_20GeV_9e-5Ve':['HNL_Majorana_eenu_20GeV_9e-5Ve'],
-                     'HNL_Majorana_eenu_20GeV_3e-5Ve':['HNL_Majorana_eenu_20GeV_3e-5Ve'],
-                     'HNL_Majorana_eenu_30GeV_1e-5Ve':['HNL_Majorana_eenu_30GeV_1e-5Ve'],
-                     'HNL_Majorana_eenu_50GeV_6e-6Ve':['HNL_Majorana_eenu_50GeV_6e-6Ve'],
+                     #'HNL_Majorana_eenu_10GeV_2e-4Ve':['HNL_Majorana_eenu_10GeV_2e-4Ve'],
+                     #'HNL_Majorana_eenu_20GeV_9e-5Ve':['HNL_Majorana_eenu_20GeV_9e-5Ve'],
+                     #'HNL_Majorana_eenu_20GeV_3e-5Ve':['HNL_Majorana_eenu_20GeV_3e-5Ve'],
+                     #'HNL_Majorana_eenu_30GeV_1e-5Ve':['HNL_Majorana_eenu_30GeV_1e-5Ve'],
+                     #'HNL_Majorana_eenu_50GeV_6e-6Ve':['HNL_Majorana_eenu_50GeV_6e-6Ve'],
     },
                 'backgrounds':{
-                    #'Zbb':['p8_ee_Zbb_ecm91'],
-                    #'Zcc': ['p8_ee_Zcc_ecm91'],
-                    #'Zud': ['p8_ee_Zud_ecm91'],
-                    #'Ztautau': ['p8_ee_Ztautau_ecm91'],
-                    #'Zee':['p8_ee_Zee_ecm91'],
+                    'Zbb':['p8_ee_Zbb_ecm91'],
+                    'Zcc': ['p8_ee_Zcc_ecm91'],
+                    'Zuds': ['p8_ee_Zuds_ecm91'],
+                    'Ztautau': ['p8_ee_Ztautau_ecm91'],
+                    'Zee':['p8_ee_Zee_ecm91'],
                     #'Zmumu':['p8_ee_Zmumu_ecm91'],
+                    #'Zss':['p8_ee_Zmumu_ecm91'],
                     #'Zuds':['p8_ee_Zuds_ecm91'],
                     },
                     #'Ztautau_spring2021': ['p8_ee_Ztautau_ecm91_spring2021'],
@@ -129,7 +143,7 @@ legend['HNL_Majorana_eenu_50GeV_6e-6Ve'] = 'm_{N} = 50 GeV, V_{e} = 6e-6'
 
 legend['Zbb'] = 'e^{+}e^{-} #rightarrow Z #rightarrow bb'
 legend['Zcc'] = 'e^{+}e^{-} #rightarrow Z #rightarrow cc'
-legend['Zud'] = 'e^{+}e^{-} #rightarrow Z #rightarrow ud'
+legend['Zuds'] = 'e^{+}e^{-} #rightarrow Z #rightarrow uds'
 legend['Ztautau'] = 'e^{+}e^{-} #rightarrow Z #rightarrow #tau#tau'
 legend['Zee'] = 'e^{+}e^{-} #rightarrow Z #rightarrow ee'
 legend['Zmumu'] = 'e^{+}e^{-} #rightarrow Z #rightarrow #mu#mu'

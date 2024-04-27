@@ -357,6 +357,17 @@ ROOT::VecOps::RVec<float> get_p(ROOT::VecOps::RVec<edm4hep::MCParticleData> in) 
   return result;
 }
 
+float get_p(ROOT::VecOps::RVec<edm4hep::MCParticleData> in) {
+  float result;
+  for (auto & p: in) {
+    TLorentzVector tlv;
+    tlv.SetXYZM(p.momentum.x, p.momentum.y, p.momentum.z, p.mass);
+    result+=tlv.P();
+  }
+  return result;
+}
+
+
 ROOT::VecOps::RVec<float> get_px(ROOT::VecOps::RVec<edm4hep::MCParticleData> in) {
   ROOT::VecOps::RVec<float> result;
   for (auto & p: in) {

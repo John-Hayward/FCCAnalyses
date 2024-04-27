@@ -164,6 +164,8 @@ namespace MCParticle{
   /// return the momenta of the input MCParticles
   ROOT::VecOps::RVec<float> get_p(ROOT::VecOps::RVec<edm4hep::MCParticleData> in);
 
+  float sum_p(ROOT::VecOps::RVec<edm4hep::MCParticleData> in);
+
   /// return the momenta of the input MCParticles
   ROOT::VecOps::RVec<float> get_px(ROOT::VecOps::RVec<edm4hep::MCParticleData> in);
 

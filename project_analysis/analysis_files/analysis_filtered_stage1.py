@@ -29,7 +29,8 @@ processList = {
         #'main_branch_pythia_card':{},
         #'old_key4hep_stack_Zbb':{}
         #'winter23_delphes_Zbb_test':{},
-        'Delphes_test':{},
+        #'Delphes_test':{},
+        'new_filter':{},
 }
 
 #Production tag. This points to the yaml files for getting sample statistics
@@ -43,13 +44,14 @@ processList = {
 #inputDir = "/eos/experiment/fcc/ee/analyses/case-studies/bsm/LLPs/HNL_Majorana_eenu/spring2021/output_MadgraphPythiaDelphes"
 #inputDir = "/eos/experiment/fcc/ee/generation/DelphesStandalone/Edm4Hep/pre_winter2023_tests_v2"
 #inputDir = "/eos/experiment/fcc/ee/generation/DelphesEvents/spring2021/IDEA"
-inputDir = "/eos/user/j/jhayward/signalGeneration/signals"
+#inputDir = "/eos/user/j/jhayward/signalGeneration/signals"
 #inputDir = "/afs/cern.ch/work/w/williams/public/FCCSkimming/k4Gen/"
+inputDir = "/afs/cern.ch/user/j/jhayward/k4Gen"
 #Optional: output directory, default is local dir
 #outputDir = "/eos/experiment/fcc/ee/analyses/case-studies/bsm/LLPs/HNL_Majorana_eenu/spring2021/output_stage1/"
 #outputDir = "/eos/experiment/fcc/ee/analyses/case-studies/bsm/LLPs/HNL_Majorana_eenu/pre_winter2023_tests_v2/output_stage1/"
 #outputDir = "/eos/user/j/jalimena/FCCeeLLP/"
-outputDir = "backgroundFilterTest/new_card/output_stage1"
+outputDir = "backgroundFilterTest/proper_filter/prelim_test/output_stage1"
 
 #outputDirEos = "/eos/experiment/fcc/ee/analyses/case-studies/bsm/LLPs/HNL_Majorana_eenu/spring2021/output_stage1/"
 #outputDirEos = "/eos/user/j/jalimena/FCCeeLLP/"
@@ -89,33 +91,39 @@ class RDFanalysis():
                .Define("FSGenElectron", "FCCAnalyses::MCParticle::sel_genStatus(1)(GenElectron_PID)")
                .Define("n_FSGenElectron", "FCCAnalyses::MCParticle::get_n(FSGenElectron)")
 
+               .Define("GenMuon_PID", "FCCAnalyses::MCParticle::sel_pdgID(13, true)(Particle)")
+               .Define("FSGenElectron", "FCCAnalyses::MCParticle::sel_genStatus(1)(GenElectron_PID)")
+               .Define("n_FSGenElectron", "FCCAnalyses::MCParticle::get_n(FSGenElectron)")
+
+               
+
                #.Define("GenPhoton_PID", "FCCAnalyses::MCParticle::sel_pdgID(22, true)(Particle)")
                #.Define("FSGenPhoton", "FCCAnalyses::MCParticle::sel_genStatus(1)(GenPhoton_PID)")
                #.Define("n_FSGenPhoton", "FCCAnalyses::MCParticle::get_n(FSGenPhoton)")
 
                #.Define("GenBs0_PID", "FCCAnalyses::MCParticle::sel_pdgID(531, true)(GenParticles)")
-               .Define("GenBs0_PID", "FCCAnalyses::MCParticle::sel_pdgID(531, true)(Particle)")
-               .Define("FSGenBs0", "FCCAnalyses::MCParticle::sel_genStatus(1)(GenBs0_PID)")
-               .Define("n_FSGenBs0", "FCCAnalyses::MCParticle::get_n(FSGenBs0)")
+               #.Define("GenBs0_PID", "FCCAnalyses::MCParticle::sel_pdgID(531, true)(Particle)")
+               #.Define("FSGenBs0", "FCCAnalyses::MCParticle::sel_genStatus(1)(GenBs0_PID)")
+               #.Define("n_FSGenBs0", "FCCAnalyses::MCParticle::get_n(FSGenBs0)")
 
-               #.Define("AllGenBs0_PID", "FCCAnalyses::MCParticle::sel_pdgID(531, false)(GenParticles)")
-               .Define("AllGenBs0_PID", "FCCAnalyses::MCParticle::sel_pdgID(531, false)(Particle)")
-               .Define("n_AllGenBs0", "FCCAnalyses::MCParticle::get_n(AllGenBs0_PID)")
+               ##.Define("AllGenBs0_PID", "FCCAnalyses::MCParticle::sel_pdgID(531, false)(GenParticles)")
+               #.Define("AllGenBs0_PID", "FCCAnalyses::MCParticle::sel_pdgID(531, false)(Particle)")
+               #.Define("n_AllGenBs0", "FCCAnalyses::MCParticle::get_n(AllGenBs0_PID)")
 
                #.Define("AllGenBs_PID", "FCCAnalyses::MCParticle::sel_Bs(true)(GenParticles)")
-               .Define("AllGenBs_PID", "FCCAnalyses::MCParticle::sel_Bs(true)(Particle)")
-               .Define("n_AllGenBs", "FCCAnalyses::MCParticle::get_n(AllGenBs_PID)")
+               #.Define("AllGenBs_PID", "FCCAnalyses::MCParticle::sel_Bs(true)(Particle)")
+               #.Define("n_AllGenBs", "FCCAnalyses::MCParticle::get_n(AllGenBs_PID)")
 
-               .Define("AllGenBs_vertex_x", "FCCAnalyses::MCParticle::get_vertex_x( AllGenBs_PID )")
-               .Define("AllGenBs_vertex_y", "FCCAnalyses::MCParticle::get_vertex_y( AllGenBs_PID )")
-               .Define("AllGenBs_vertex_z", "FCCAnalyses::MCParticle::get_vertex_z( AllGenBs_PID )")
+               #.Define("AllGenBs_vertex_x", "FCCAnalyses::MCParticle::get_vertex_x( AllGenBs_PID )")
+               #.Define("AllGenBs_vertex_y", "FCCAnalyses::MCParticle::get_vertex_y( AllGenBs_PID )")
+               #.Define("AllGenBs_vertex_z", "FCCAnalyses::MCParticle::get_vertex_z( AllGenBs_PID )")
 
-               .Define("AllGenBs_endpoint_x", "FCCAnalyses::MCParticle::get_endPoint_x( AllGenBs_PID )")
-               .Define("AllGenBs_endpoint_y", "FCCAnalyses::MCParticle::get_endPoint_y( AllGenBs_PID )")
-               .Define("AllGenBs_endpoint_z", "FCCAnalyses::MCParticle::get_endPoint_z( AllGenBs_PID )")
+               #.Define("AllGenBs_endpoint_x", "FCCAnalyses::MCParticle::get_endPoint_x( AllGenBs_PID )")
+               #.Define("AllGenBs_endpoint_y", "FCCAnalyses::MCParticle::get_endPoint_y( AllGenBs_PID )")
+               #.Define("AllGenBs_endpoint_z", "FCCAnalyses::MCParticle::get_endPoint_z( AllGenBs_PID )")
 
-               .Define("AllGenBs_Lxyz", "return sqrt((AllGenBs_vertex_x-AllGenBs_endpoint_x)*(AllGenBs_vertex_x-AllGenBs_endpoint_x) + (AllGenBs_vertex_y-AllGenBs_endpoint_y)*(AllGenBs_vertex_y-AllGenBs_endpoint_y) + (AllGenBs_vertex_z-AllGenBs_endpoint_z)*(AllGenBs_vertex_z-AllGenBs_endpoint_z))")
-               .Define("AllGenBs_t", "return (AllGenBs_Lxyz / (2.998e+11))")
+               #.Define("AllGenBs_Lxyz", "return sqrt((AllGenBs_vertex_x-AllGenBs_endpoint_x)*(AllGenBs_vertex_x-AllGenBs_endpoint_x) + (AllGenBs_vertex_y-AllGenBs_endpoint_y)*(AllGenBs_vertex_y-AllGenBs_endpoint_y) + (AllGenBs_vertex_z-AllGenBs_endpoint_z)*(AllGenBs_vertex_z-AllGenBs_endpoint_z))")
+               #.Define("AllGenBs_t", "return (AllGenBs_Lxyz / (2.998e+11))")
 
                )
                 return df2
@@ -125,16 +133,16 @@ class RDFanalysis():
                         ######## Monte-Carlo particles #######
                         "n_FSGenElectron",
                         #"n_FSGenPhoton",
-                        "n_FSGenBs0",
-                        "n_AllGenBs0",
-                        "n_AllGenBs",
-                        "AllGenBs_t",
-                        "AllGenBs_vertex_x",
-                        "AllGenBs_vertex_y",
-                        "AllGenBs_vertex_z",
-                        "AllGenBs_endpoint_x",
-                        "AllGenBs_endpoint_y",
-                        "AllGenBs_endpoint_z",
+                        #"n_FSGenBs0",
+                        #"n_AllGenBs0",
+                        #"n_AllGenBs",
+                        #"AllGenBs_t",
+                        #"AllGenBs_vertex_x",
+                        #"AllGenBs_vertex_y",
+                        #"AllGenBs_vertex_z",
+                        #"AllGenBs_endpoint_x",
+                        #"AllGenBs_endpoint_y",
+                        #"AllGenBs_endpoint_z",
                         #"n_RecoElectrons",
                         #"n_RecoMuons",
                         #"n_RecoPhotons",

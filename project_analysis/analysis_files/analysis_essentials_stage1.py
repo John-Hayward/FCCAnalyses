@@ -142,6 +142,7 @@ class RDFanalysis():
                 .Define("n_seltracks_DVs", "VertexingUtils::get_n_SV(DV_evt_seltracks)")
 
                 .Define("DV_Lxyz", "VertexingUtils::get_d3d_SV(DV_evt_seltracks, PrimaryVertexObject)")
+                .Define("DV_Lxyz_error", "myUtils::get_d3d_SV_Error(DV_evt_seltracks, PrimaryVertexObject)")
                 .Define("DV_Lxyz_sig", "myUtils::get_d3d_SV_Sig(DV_evt_seltracks, PrimaryVertexObject)")
 
                )
@@ -161,6 +162,7 @@ class RDFanalysis():
                         "n_seltracks_DVs",
                         "DV_Lxyz",
                         "DV_Lxyz_sig",
+                        "DV_Lxyz_error",
                         
 		]
 

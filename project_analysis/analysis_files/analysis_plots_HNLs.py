@@ -13,19 +13,19 @@ delphesVersion = '3.4.2'
 #delphesVersion = ''
 energy         = 91
 collider       = 'FCC-ee'
-inputDir       = 'recluster_test/missing_energy/output_finalSel_noscale_binned/'
+inputDir       = 'reclustered/winter23_2el/output_finalSel/'
 #inputDir       = 'output_finalSel_Ztautau/'
-formats        = ['png','pdf']
+formats        = ['png']
 #formats        = ['pdf']
 yaxis          = ['lin','log']
 stacksig       = ['nostack']
-outdir         = 'recluster_test/missing_energy/plots_noscale_binned'
+outdir         = 'reclustered/winter23_2el/plots_properscale'
 #outdir         = 'plots_Ztautau_spring2021_vs_prewinter2023/'
 splitLeg       = True
 
 variables = [
 
-    "RecoElectron_MinDeltaR",
+    #"RecoElectron_MinDeltaR",
     "n_antikt_jets",
     "reclustered_missing_p",
     "new_missing_p",
@@ -38,134 +38,134 @@ variables = [
     "n_RecoMuons",
 
     #gen variables
-    "n_FSGenElectron",
-    "n_FSGenNeutrino",
-    "n_FSGenPhoton",
+    #"n_FSGenElectron",
+    #"n_FSGenNeutrino",
+    #"n_FSGenPhoton",
 
-    "FSGenElectron_e",
-    "FSGenElectron_p",
-    "FSGenElectron_pt",
-    "FSGenElectron_pz",
-    "FSGenElectron_eta",
-    "FSGenElectron_theta",
-    "FSGenElectron_phi",
+    #"FSGenElectron_e",
+    #"FSGenElectron_p",
+    #"FSGenElectron_pt",
+    #"FSGenElectron_pz",
+    #"FSGenElectron_eta",
+    #"FSGenElectron_theta",
+    #"FSGenElectron_phi",
 
-    "FSGenNeutrino_e",
-    "FSGenNeutrino_p",
-    "FSGenNeutrino_pt",
-    "FSGenNeutrino_pz",
-    "FSGenNeutrino_eta",
-    "FSGenNeutrino_theta",
-    "FSGenNeutrino_phi",
+    #"FSGenNeutrino_e",
+    #"FSGenNeutrino_p",
+    #"FSGenNeutrino_pt",
+    #"FSGenNeutrino_pz",
+    #"FSGenNeutrino_eta",
+    #"FSGenNeutrino_theta",
+    #"FSGenNeutrino_phi",
 
-    "FSGenPhoton_e",
-    "FSGenPhoton_p",
-    "FSGenPhoton_pt",
-    "FSGenPhoton_pz",
-    "FSGenPhoton_eta",
-    "FSGenPhoton_theta",
-    "FSGenPhoton_phi",
+    #"FSGenPhoton_e",
+    #"FSGenPhoton_p",
+    #"FSGenPhoton_pt",
+    #"FSGenPhoton_pz",
+    #"FSGenPhoton_eta",
+    #"FSGenPhoton_theta",
+    #"FSGenPhoton_phi",
 
-    "FSGenElectron_vertex_x",
-    "FSGenElectron_vertex_y",
-    "FSGenElectron_vertex_z",
-    "FSGenElectron_vertex_x_prompt",
-    "FSGenElectron_vertex_y_prompt",
-    "FSGenElectron_vertex_z_prompt",
+    #"FSGenElectron_vertex_x",
+    #"FSGenElectron_vertex_y",
+    #"FSGenElectron_vertex_z",
+    #"FSGenElectron_vertex_x_prompt",
+    #"FSGenElectron_vertex_y_prompt",
+    #"FSGenElectron_vertex_z_prompt",
 
-    "FSGen_Lxy",
-    "FSGen_Lxyz",
-    "FSGen_Lxyz_prompt",
+    #"FSGen_Lxy",
+    #"FSGen_Lxyz",
+    #"FSGen_Lxyz_prompt",
 
-    "FSGen_ee_invMass",
-    "FSGen_eenu_invMass",
+    #"FSGen_ee_invMass",
+    #"FSGen_eenu_invMass",
 
-    "All_n_GenHNL",
-    "AllGenHNL_mass",
-    "AllGenHNL_p",
-    "AllGenHNL_theta",
+    #"All_n_GenHNL",
+    #"AllGenHNL_mass",
+    #"AllGenHNL_p",
+    #"AllGenHNL_theta",
 
-    "GenHNL_mass",
-    "GenHNL_p",
-    "GenHNL_theta",
-    "GenHNL_lifetime_xyz",
+    #"GenHNL_mass",
+    #"GenHNL_p",
+    #"GenHNL_theta",
+    #"GenHNL_lifetime_xyz",
 
-    #reco variables
-    #"n_RecoTracks",
-    #"n_RecoJets",
-    #"n_RecoPhotons",
-    #"n_RecoElectrons",
-    #"n_RecoMuons",
+    ##reco variables
+    ##"n_RecoTracks",
+    ##"n_RecoJets",
+    ##"n_RecoPhotons",
+    ##"n_RecoElectrons",
+    ##"n_RecoMuons",
 
-    "RecoJet_e",
-    "RecoJet_p",
-    "RecoJet_pt",
-    "RecoJet_pz",
-    "RecoJet_eta",
-    "RecoJet_theta",
-    "RecoJet_phi",
-    "RecoJet_charge",
+    #"RecoJet_e",
+    #"RecoJet_p",
+    #"RecoJet_pt",
+    #"RecoJet_pz",
+    #"RecoJet_eta",
+    #"RecoJet_theta",
+    #"RecoJet_phi",
+    #"RecoJet_charge",
 
-    "RecoJetTrack_absD0",
-    "RecoJetTrack_absD0_prompt",
-    "RecoJetTrack_absZ0",
-    "RecoJetTrack_absZ0_prompt",
-    "RecoJetTrack_absD0sig",
-    "RecoJetTrack_absD0sig_prompt",
-    "RecoJetTrack_absZ0sig",
-    "RecoJetTrack_absZ0sig_prompt",
-    "RecoJetTrack_D0cov",
-    "RecoJetTrack_Z0cov",
+    #"RecoJetTrack_absD0",
+    #"RecoJetTrack_absD0_prompt",
+    #"RecoJetTrack_absZ0",
+    #"RecoJetTrack_absZ0_prompt",
+    #"RecoJetTrack_absD0sig",
+    #"RecoJetTrack_absD0sig_prompt",
+    #"RecoJetTrack_absZ0sig",
+    #"RecoJetTrack_absZ0sig_prompt",
+    #"RecoJetTrack_D0cov",
+    #"RecoJetTrack_Z0cov",
 
-    "RecoElectron_e",
-    "RecoElectron_p",
-    "RecoElectron_pt",
-    "RecoElectron_pz",
-    "RecoElectron_eta",
-    "RecoElectron_theta",
-    "RecoElectron_phi",
-    "RecoElectron_charge",
+    #"RecoElectron_e",
+    #"RecoElectron_p",
+    #"RecoElectron_pt",
+    #"RecoElectron_pz",
+    #"RecoElectron_eta",
+    #"RecoElectron_theta",
+    #"RecoElectron_phi",
+    #"RecoElectron_charge",
 
-    "RecoElectronTrack_absD0",
-    "RecoElectronTrack_absD0_prompt",
-    "RecoElectronTrack_absZ0",
-    "RecoElectronTrack_absZ0_prompt",
-    "RecoElectronTrack_absD0sig",
-    "RecoElectronTrack_absD0sig_med",
-    "RecoElectronTrack_absD0sig_prompt",
-    "RecoElectronTrack_absZ0sig",
-    "RecoElectronTrack_absZ0sig_prompt",
-    "RecoElectronTrack_D0cov",
-    "RecoElectronTrack_Z0cov",
+    #"RecoElectronTrack_absD0",
+    #"RecoElectronTrack_absD0_prompt",
+    #"RecoElectronTrack_absZ0",
+    #"RecoElectronTrack_absZ0_prompt",
+    #"RecoElectronTrack_absD0sig",
+    #"RecoElectronTrack_absD0sig_med",
+    #"RecoElectronTrack_absD0sig_prompt",
+    #"RecoElectronTrack_absZ0sig",
+    #"RecoElectronTrack_absZ0sig_prompt",
+    #"RecoElectronTrack_D0cov",
+    #"RecoElectronTrack_Z0cov",
 
-    "RecoPhoton_e",
-    "RecoPhoton_p",
-    "RecoPhoton_pt",
-    "RecoPhoton_pz",
-    "RecoPhoton_eta",
-    "RecoPhoton_theta",
-    "RecoPhoton_phi",
-    "RecoPhoton_charge",
+    #"RecoPhoton_e",
+    #"RecoPhoton_p",
+    #"RecoPhoton_pt",
+    #"RecoPhoton_pz",
+    #"RecoPhoton_eta",
+    #"RecoPhoton_theta",
+    #"RecoPhoton_phi",
+    #"RecoPhoton_charge",
 
-    "RecoMuon_e",
-    "RecoMuon_p",
-    "RecoMuon_pt",
-    "RecoMuon_pz",
-    "RecoMuon_eta",
-    "RecoMuon_theta",
-    "RecoMuon_phi",
-    "RecoMuon_charge",
+    #"RecoMuon_e",
+    #"RecoMuon_p",
+    #"RecoMuon_pt",
+    #"RecoMuon_pz",
+    #"RecoMuon_eta",
+    #"RecoMuon_theta",
+    #"RecoMuon_phi",
+    #"RecoMuon_charge",
 
-    "RecoMuonTrack_absD0",
-    "RecoMuonTrack_absD0_prompt",
-    "RecoMuonTrack_absZ0",
-    "RecoMuonTrack_absZ0_prompt",
-    "RecoMuonTrack_absD0sig",
-    "RecoMuonTrack_absD0sig_prompt",
-    "RecoMuonTrack_absZ0sig",
-    "RecoMuonTrack_absZ0sig_prompt",
-    "RecoMuonTrack_D0cov",
-    "RecoMuonTrack_Z0cov",
+    #"RecoMuonTrack_absD0",
+    #"RecoMuonTrack_absD0_prompt",
+    #"RecoMuonTrack_absZ0",
+    #"RecoMuonTrack_absZ0_prompt",
+    #"RecoMuonTrack_absD0sig",
+    #"RecoMuonTrack_absD0sig_prompt",
+    #"RecoMuonTrack_absZ0sig",
+    #"RecoMuonTrack_absZ0sig_prompt",
+    #"RecoMuonTrack_D0cov",
+    #"RecoMuonTrack_Z0cov",
 
     "RecoMissingEnergy_e",
     #"RecoMissingEnergy_p",
@@ -225,17 +225,19 @@ colors['HNL_Majorana_eenu_90GeV_1p41e-6Ve'] = ROOT.kGreen+1
 
 plots = {}
 plots['HNL'] = {'signal':{
-                     'HNL_Majorana_eenu_30GeV_1p41e-6Ve':['HNL_Majorana_eenu_30GeV_1p41e-6Ve'],
-                     'HNL_Majorana_eenu_50GeV_1p41e-6Ve':['HNL_Majorana_eenu_50GeV_1p41e-6Ve'],
-                     'HNL_Majorana_eenu_70GeV_1p41e-6Ve':['HNL_Majorana_eenu_70GeV_1p41e-6Ve'],
-                     'HNL_Majorana_eenu_90GeV_1p41e-6Ve':['HNL_Majorana_eenu_90GeV_1p41e-6Ve'],
+                     #'HNL_Majorana_eenu_30GeV_1p41e-6Ve':['HNL_Majorana_eenu_30GeV_1p41e-6Ve'],
+                     #'HNL_Majorana_eenu_50GeV_1p41e-6Ve':['HNL_Majorana_eenu_50GeV_1p41e-6Ve'],
+                     #'HNL_Majorana_eenu_70GeV_1p41e-6Ve':['HNL_Majorana_eenu_70GeV_1p41e-6Ve'],
+                     #'HNL_Majorana_eenu_90GeV_1p41e-6Ve':['HNL_Majorana_eenu_90GeV_1p41e-6Ve'],
     },
                 'backgrounds':{},
-                    #'Zbb':['p8_ee_Zbb_ecm91'],
-                    #'Zcc': ['p8_ee_Zcc_ecm91'],
-                    #'Zuds': ['p8_ee_Zuds_ecm91'],
-                    #'Ztautau': ['p8_ee_Ztautau_ecm91'],
-                    #'Zee':['p8_ee_Zee_ecm91'],
+                    'Zbb':['p8_ee_Zbb_ecm91'],
+                    'Zcc': ['p8_ee_Zcc_ecm91'],
+                    'Zud': ['p8_ee_Zud_ecm91'],
+                    'Ztautau': ['p8_ee_Ztautau_ecm91'],
+                    'Zee':['p8_ee_Zee_ecm91'],
+                    'Zss':['p8_ee_Zss_ecm91'],
+                    'Zmumu':['p8_ee_Zmumu_ecm91'],
                     #'Ztautau_spring2021': ['p8_ee_Ztautau_ecm91_spring2021'],
                     #'Ztautau_pre_winter2023_tests_v2': ['p8_ee_Ztautau_ecm91_pre_winter2023_tests_v2'],
                 }
@@ -248,11 +250,14 @@ legend['HNL_Majorana_eenu_50GeV_1p41e-6Ve'] = 'm_{N} = 50 GeV, V_{e} = 1.41e-6'
 legend['HNL_Majorana_eenu_70GeV_1p41e-6Ve'] = 'm_{N} = 70 GeV, V_{e} = 1.41e-6'
 legend['HNL_Majorana_eenu_90GeV_1p41e-6Ve'] = 'm_{N} = 90 GeV, V_{e} = 1.41e-6'
 
-#legend['Zbb'] = 'e^{+}e^{-} #rightarrow Z #rightarrow bb'
-#legend['Zcc'] = 'e^{+}e^{-} #rightarrow Z #rightarrow cc'
+legend['Zbb'] = 'e^{+}e^{-} #rightarrow Z #rightarrow bb'
+legend['Zcc'] = 'e^{+}e^{-} #rightarrow Z #rightarrow cc'
 #legend['Zuds'] = 'e^{+}e^{-} #rightarrow Z #rightarrow uds'
-#legend['Ztautau'] = 'e^{+}e^{-} #rightarrow Z #rightarrow #tau#tau'
-#legend['Zee'] = 'e^{+}e^{-} #rightarrow Z #rightarrow ee'
+legend['Zud'] = 'e^{+}e^{-} #rightarrow Z #rightarrow ud'
+legend['Ztautau'] = 'e^{+}e^{-} #rightarrow Z #rightarrow #tau#tau'
+legend['Zee'] = 'e^{+}e^{-} #rightarrow Z #rightarrow ee'
+legend['Zss'] = 'e^{+}e^{-} #rightarrow Z #rightarrow ss'
+legend['Zmumu'] = 'e^{+}e^{-} #rightarrow Z #rightarrow #mu#mu'
 #legend['Ztautau_spring2021'] = 'Z #rightarrow #tau#tau Spring2021'
 #legend['Ztautau_pre_winter2023_tests_v2'] = 'Z #rightarrow #tau#tau pre winter2023 tests v2'
 
