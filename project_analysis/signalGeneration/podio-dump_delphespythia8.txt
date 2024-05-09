@@ -1,0 +1,38 @@
+input file: delphespythia8_edm4hep.root
+
+datamodel model definitions stored in this file: edm4hep
+
+Frame categories in this file:
+Name                 Entries   
+-------------------------------
+events               10000     
+
+################################### events: 0 ####################################
+Collections:
+Name                    ValueType                             Size  ID
+----------------------  ----------------------------------  ------  --------
+CalorimeterHits         edm4hep::CalorimeterHit                 14  bf734841
+EFlowNeutralHadron      edm4hep::Cluster                         2  8c948695
+EFlowPhoton             edm4hep::Cluster                        12  7b7b7467
+EFlowTrack              edm4hep::Track                          24  27b5f34c
+EFlowTrack_L            float                                   24  ee0813d7
+Electron                edm4hep::ReconstructedParticle           0  25a33d2d
+Electron_IsolationVar   float                                    0  f94f4b9a
+EventHeader             edm4hep::EventHeader                     1  d793ab91
+Jet                     edm4hep::ReconstructedParticle           2  772ddb0f
+magFieldBz              float                                    1  ca3cf4b4
+MCRecoAssociations      edm4hep::MCRecoParticleAssociation      38  73841f11
+Muon                    edm4hep::ReconstructedParticle           1  06b04350
+Muon_IsolationVar       float                                    1  0716b42b
+Particle                edm4hep::MCParticle                    114  36ec0c46
+ParticleIDs             edm4hep::ParticleID                     26  667bc89d
+Photon                  edm4hep::ReconstructedParticle           1  553bed4e
+Photon_IsolationVar     float                                    1  ca046419
+ReconstructedParticles  edm4hep::ReconstructedParticle          38  7b733cce
+TrackerHits             edm4hep::TrackerHit                     72  c906a0cc
+
+Parameters:
+Name    Type    Elements
+------  ------  ----------
+
+

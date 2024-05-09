@@ -1,0 +1,100 @@
+ |      6   Error in ParticleDecays::decay: failed to find workable decay channel                                  | 
+ |     99   Error in Pythia::next: hadronLevel failed; try again                                                   | 
+ |     99   Error in StringFragmentation::fragment: stuck in joining                                               | 
+ |    232   Warning in HadronWidths::pickMasses: angular momentum and running widths not used                      | 
+ |     51   Warning in TauDecays::decay: maximum decay weight exceeded in tau decay                                | 
+ |    102   Warning in TauDecays::decay: unknown correlated tau production, assuming from unpolarized photon       | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+EventFilter         DEBUG Skipping event...
+
+ *-------  PYTHIA Event and Cross Section Statistics  -------------------------------------------------------------*
+ |                                                                                                                 |
+ | Subprocess                                    Code |            Number of events       |      sigma +- delta    |
+ |                                                    |       Tried   Selected   Accepted |     (estimated) (mb)   |
+ |                                                    |                                   |                        |
+ |-----------------------------------------------------------------------------------------------------------------|
+ |                                                    |                                   |                        |
+ | f fbar -> gamma*/Z0                            221 |    93770058    6530532    6530532 |   6.599e-06  1.378e-09 |
+ |                                                    |                                   |                        |
+ | sum                                                |    93770058    6530532    6530532 |   6.599e-06  1.378e-09 |
+ |                                                                                                                 |
+ *-------  End PYTHIA Event and Cross Section Statistics ----------------------------------------------------------*
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |      6   Error in ParticleDecays::decay: failed to find workable decay channel                                  | 
+ |     99   Error in Pythia::next: hadronLevel failed; try again                                                   | 
+ |     99   Error in StringFragmentation::fragment: stuck in joining                                               | 
+ |    232   Warning in HadronWidths::pickMasses: angular momentum and running widths not used                      | 
+ |     51   Warning in TauDecays::decay: maximum decay weight exceeded in tau decay                                | 
+ |    102   Warning in TauDecays::decay: unknown correlated tau production, assuming from unpolarized photon       | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+EventFilter         DEBUG Skipping event...
+
+ *-------  PYTHIA Event and Cross Section Statistics  -------------------------------------------------------------*
+ |                                                                                                                 |
+ | Subprocess                                    Code |            Number of events       |      sigma +- delta    |
+ |                                                    |       Tried   Selected   Accepted |     (estimated) (mb)   |
+ |                                                    |                                   |                        |
+ |-----------------------------------------------------------------------------------------------------------------|
+ |                                                    |                                   |                        |
+ | f fbar -> gamma*/Z0                            221 |    93770073    6530533    6530533 |   6.599e-06  1.378e-09 |
+ |                                                    |                                   |                        |
+ | sum                                                |    93770073    6530533    6530533 |   6.599e-06  1.378e-09 |
+ |                                                                                                                 |
+ *-------  End PYTHIA Event and Cross Section Statistics ----------------------------------------------------------*
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |      6   Error in ParticleDecays::decay: failed to find workable decay channel                                  | 
+ |     99   Error in Pythia::next: hadronLevel failed; try again                                                   | 
+ |     99   Error in StringFragmentation::fragment: stuck in joining                                               | 
+ |    232   Warning in HadronWidths::pickMasses: angular momentum and running widths not used                      | 
+ |     51   Warning in TauDecays::decay: maximum decay weight exceeded in tau decay                                | 
+ |    102   Warning in TauDecays::decay: unknown correlated tau production, assuming from unpolarized photon       | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+EventFilter         DEBUG Skipping event...
+
+ *-------  PYTHIA Event and Cross Section Statistics  -------------------------------------------------------------*
+ |                                                                                                                 |
+ | Subprocess                                    Code |            Number of events       |      sigma +- delta    |
+ |                                                    |       Tried   Selected   Accepted |     (estimated) (mb)   |
+ |                                                    |                                   |                        |
+ |-----------------------------------------------------------------------------------------------------------------|
+ |                                                    |                                   |                        |
+ | f fbar -> gamma*/Z0                            221 |    93770084    6530534    6530534 |   6.599e-06  1.378e-09 |
+ |                                                    |                                   |                        |
+ | sum                                                |    93770084    6530534    6530534 |   6.599e-06  1.378e-09 |
+ |                                                                                                                 |
+ *-------  End PYTHIA Event and Cross Section Statistics ----------------------------------------------------------*
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |      6   Error in ParticleDecays::decay: failed to find workable decay channel                                  | 
+ |     99   Error in Pythia::next: hadronLevel failed; try again                                                   | 
+ |     99   Error in StringFragmentation::fragment: stuck in joining                                               | 
+ |    232   Warning in HadronWidths::pickMasses: angular momentum and running widths not used                      | 
+ |     51   Warning in TauDecays::decay: maximum decay weight exceeded in tau decay                                | 
+ |    102   Warning in TauDecays::decay: unknown correlated tau production, assuming from unpolarized photon       | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+EventFilter         DEBUG Event contains 89 particles.
+EventFilter         DEBUG Targeted number of events to generate: 50000
+EventFilter         DEBUG Number of events already generated: 50000
+EventFilter         DEBUG Remaining number of event to generate: 0
+EventFilter         DEBUG Number of events seen so far: 6530534
+ApplicationMgr       INFO Application Manager Stopped successfully
+EventFilter         DEBUG Number of events seen: 6530534
+EventLoopMgr         INFO Histograms converted successfully according to request.
+ToolSvc              INFO Removing all tools created by ToolSvc
+ApplicationMgr       INFO Application Manager Finalized successfully
+ApplicationMgr       INFO Application Manager Terminated successfully

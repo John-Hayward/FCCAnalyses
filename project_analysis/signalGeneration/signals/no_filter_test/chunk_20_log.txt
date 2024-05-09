@@ -1,0 +1,100 @@
+ | sum                                                |       15505        997        997 |   6.352e-06  1.036e-07 |
+ |                                                                                                                 |
+ *-------  End PYTHIA Event and Cross Section Statistics ----------------------------------------------------------*
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |      0   no errors or warnings to report                                                                        | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+EventFilter         DEBUG Event contains 110 particles.
+EventFilter         DEBUG Targeted number of events to generate: 1000
+EventFilter         DEBUG Number of events already generated: 997
+EventFilter         DEBUG Remaining number of event to generate: 3
+EventFilter         DEBUG Number of events seen so far: 997
+
+ *-------  PYTHIA Event and Cross Section Statistics  -------------------------------------------------------------*
+ |                                                                                                                 |
+ | Subprocess                                    Code |            Number of events       |      sigma +- delta    |
+ |                                                    |       Tried   Selected   Accepted |     (estimated) (mb)   |
+ |                                                    |                                   |                        |
+ |-----------------------------------------------------------------------------------------------------------------|
+ |                                                    |                                   |                        |
+ | f fbar -> gamma*/Z0                            221 |       15564        998        998 |   6.344e-06  1.033e-07 |
+ |                                                    |                                   |                        |
+ | sum                                                |       15564        998        998 |   6.344e-06  1.033e-07 |
+ |                                                                                                                 |
+ *-------  End PYTHIA Event and Cross Section Statistics ----------------------------------------------------------*
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |      0   no errors or warnings to report                                                                        | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+EventFilter         DEBUG Event contains 126 particles.
+EventFilter         DEBUG Targeted number of events to generate: 1000
+EventFilter         DEBUG Number of events already generated: 998
+EventFilter         DEBUG Remaining number of event to generate: 2
+EventFilter         DEBUG Number of events seen so far: 998
+
+ *-------  PYTHIA Event and Cross Section Statistics  -------------------------------------------------------------*
+ |                                                                                                                 |
+ | Subprocess                                    Code |            Number of events       |      sigma +- delta    |
+ |                                                    |       Tried   Selected   Accepted |     (estimated) (mb)   |
+ |                                                    |                                   |                        |
+ |-----------------------------------------------------------------------------------------------------------------|
+ |                                                    |                                   |                        |
+ | f fbar -> gamma*/Z0                            221 |       15565        999        999 |   6.348e-06  1.034e-07 |
+ |                                                    |                                   |                        |
+ | sum                                                |       15565        999        999 |   6.348e-06  1.034e-07 |
+ |                                                                                                                 |
+ *-------  End PYTHIA Event and Cross Section Statistics ----------------------------------------------------------*
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |      0   no errors or warnings to report                                                                        | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+EventFilter         DEBUG Event contains 145 particles.
+EventFilter         DEBUG Targeted number of events to generate: 1000
+EventFilter         DEBUG Number of events already generated: 999
+EventFilter         DEBUG Remaining number of event to generate: 1
+EventFilter         DEBUG Number of events seen so far: 999
+
+ *-------  PYTHIA Event and Cross Section Statistics  -------------------------------------------------------------*
+ |                                                                                                                 |
+ | Subprocess                                    Code |            Number of events       |      sigma +- delta    |
+ |                                                    |       Tried   Selected   Accepted |     (estimated) (mb)   |
+ |                                                    |                                   |                        |
+ |-----------------------------------------------------------------------------------------------------------------|
+ |                                                    |                                   |                        |
+ | f fbar -> gamma*/Z0                            221 |       15570       1000       1000 |   6.350e-06  1.034e-07 |
+ |                                                    |                                   |                        |
+ | sum                                                |       15570       1000       1000 |   6.350e-06  1.034e-07 |
+ |                                                                                                                 |
+ *-------  End PYTHIA Event and Cross Section Statistics ----------------------------------------------------------*
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |      0   no errors or warnings to report                                                                        | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+EventFilter         DEBUG Event contains 103 particles.
+EventFilter         DEBUG Targeted number of events to generate: 1000
+EventFilter         DEBUG Number of events already generated: 1000
+EventFilter         DEBUG Remaining number of event to generate: 0
+EventFilter         DEBUG Number of events seen so far: 1000
+ApplicationMgr       INFO Application Manager Stopped successfully
+EventFilter         DEBUG Number of events seen: 1000
+EventLoopMgr         INFO Histograms converted successfully according to request.
+ToolSvc              INFO Removing all tools created by ToolSvc
+ApplicationMgr       INFO Application Manager Finalized successfully
+ApplicationMgr       INFO Application Manager Terminated successfully

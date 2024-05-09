@@ -10,7 +10,7 @@ inputDir = "genVsReco/smarter_tests/output_stage1/"
 #outputDir = "/eos/experiment/fcc/ee/analyses/case-studies/bsm/LLPs/HNL_Majorana_eenu/spring2021/output_finalSel/"
 #outputDir = "/eos/experiment/fcc/ee/analyses/case-studies/bsm/LLPs/HNL_Majorana_eenu/pre_winter2023_tests_v2/output_finalSel/"
 #outputDir = "winter2023_fulldataset/output_finalSel_2el0mu0photons0jets/"
-outputDir = "genVsReco/smarter_tests/output_finalSel/"
+outputDir = "genVsReco/effectiveness_final/output_finalSel/"
 
 #Integrated luminosity for scaling number of events (required only if setting doScale to true)
 intLumi = 150e+6 #pb^-1
@@ -79,10 +79,19 @@ doTree = False
 ##Dictionnay of the list of cuts. The key is the name of the selection that will be added to the output file
 cutList = {
     "selNone": "n_FSGenElectron > -1",
-    "selEleCut": "n_FSGenElectron != 2",
-    "selMuCut": "n_FSGenMuon != 0",
-    "selPhotCut": "n_FSGenPhoton != 0",
-    "selMomentumCut": "FSGenNeutrino_totalP < 10",
+    "selEle": "n_FSGenElectron == 2",
+    "selMu": "n_FSGenMuon == 0",
+    "selEleMu": "n_FSGenElectron == 2 && n_FSGenMuon == 0",
+    "selEleMuPho": "n_FSGenElectron == 2 && n_FSGenMuon == 0 && n_FSGenPhoton==0",
+    #"selRecoEle": "n_RecoElectrons==2",
+    #"selRecoGenEle":"n_RecoElectrons==2 && n_FSGenElectron==2",
+    #"selRecoMu": "n_RecoMuons==0",
+    #"selRecoGenMu": "n_RecoMuons==0 && n_FSGenMuon==0",
+    #"selRecoPhot": "n_RecoPhotons==0",
+    #"selRecoGenPhot": "n_RecoPhotons==0 && n_FSGenPhoton==0",
+    #"selRecoMom": "RecoMissingEnergy_p[0]>20",
+    #"selRecoGenMom": "RecoMissingEnergy_p[0]>20 && FSGenNeutrino_totalP>10",
+    
     # "sel1FSGenEle": "n_FSGenElectron>0",
     # "sel1FSGenEle_eeInvMassGt80": "n_FSGenElectron>0 && FSGen_ee_invMass >80",
     # "sel1FSGenNu": "n_FSGenNeutrino>0",
@@ -100,10 +109,18 @@ cutList = {
 ###Dictionary for prettier names of cuts (optional)
 cutLabels = {
     "selNone": "Before selection",
-    "selEleCut": "Not 2 FS gen electrons",
-    "selMuCut": "Not 0 FS gen muons",
-    "selPhotCut": "Not 0 FS gen photons",
-    "selMomentumCut": "Final state gen neutrino momentum < 10GeV",
+    "selEle": "just el",
+    "selMu": "just mu",
+    "selEleMu": "el and mu",
+    "selEleMuPho": "all 3"
+    #"selRecoEle": "Elec Reco",
+    #"selRecoGenEle":"Elec Gen and Reco",
+    #"selRecoMu": "Mu Reco",
+    #"selRecoGenMu": "Mu Gen and Reco",
+    #"selRecoPhot": "Phot Reco",
+    #"selRecoGenPhot": "Phot Gen and Reco",
+    #"selRecoMom": "Mom Reco",
+    #"selRecoGenMom": "Mom Gen and Reco",
     #"sel2RecoEle": "Exactly 2 electrons",
     #"sel2RecoEle_vetoes": "Veto photons, muons, and jets",
     #"sel2RecoEle_vetoes_MissingEnergyGt10": "$\\not\\! p >$ 10 GeV",
