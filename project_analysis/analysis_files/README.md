@@ -7,3 +7,5 @@ The plots presented within the report were generated using the files named `anal
 A second series of files names `analysis_GenVsReco_*.py` were used to generate a set of comparisons between generator level and reconstructed level variables. The variables considered here were those discussed in the final section of the report describing generator level filtering. 
 
 For all work done including jets, the anti_kt jet reclustering algorithm was used, as can be seen in [this code snippet](https://github.com/John-Hayward/FCCAnalyses/blob/master/project_analysis/analysis_files/analysis_essentials_stage1.py#L98-L113)
+
+Reconstruction of displaced vertices was performed using [LCFIPlus get_SV_event](https://github.com/John-Hayward/FCCAnalyses/blob/master/project_analysis/analysis_files/analysis_essentials_stage1.py#L136-L142) requiring parameters on vertexes of p_t>1GeV and d0>2mm. 
