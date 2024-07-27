@@ -1,3 +1,12 @@
+# Code notes on project
+
+Additional analysis tools can be found in ./project_analysis/analyzers/dataframe which were used in generating the data included in my report.
+
+A series of new ee->z->N nu signals were generated for the purposes of the report, all generated using the code in ./project_analysis/signalGeneration. Further details of this generation can be found within this directory.
+
+Finally, analysis of the signals and backgrounds was performed using the `fccanalysis` command included in the Key4hep, parsing the python files located in ./project_analysis/analysis_files.
+
+
 # Test
 
 # FCCAnalyses
